@@ -2478,15 +2478,12 @@
        ;; name + -vis
        :nickname 'tsz
        ;; nickname
-       :packages
-       '()
-       :sound-banks
-       '()
-       :music-bank #f
-       :ambient-sounds
-       '()
-       :mood '*village1-mood*
-       :mood-func 'update-mood-village1
+       :packages '(snow)
+       :sound-banks '(snow)
+       :music-bank 'snow
+       :ambient-sounds '()
+       :mood '*snow-mood*
+       :mood-func 'update-mood-snow
        :ocean '*ocean-map-village1*
        :sky #t
        :sun-fade 1.0
@@ -2496,7 +2493,7 @@
              :name "test-zone-start"
              :level 'test-zone
              :trans
-             (new 'static 'vector :x 0.0 :y (meters 10.) :z (meters 10.) :w 1.0)
+             (new 'static 'vector :x 0.0 :y (meters 10.) :z (meters 2000.) :w 1.0)
              :quat
              (new 'static 'quaternion :w 1.0)
              :camera-trans

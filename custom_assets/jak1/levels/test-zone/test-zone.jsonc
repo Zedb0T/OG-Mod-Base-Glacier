@@ -351,6 +351,39 @@
     },
 
     {
+      "trans": [23, 41.35, 1400.42], // translation
+      "etype": "citb-coil", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [0, 0, 0, 1], // quaternion
+      "bsphere": [-23, 42.75, 1429.42, 10], // bounding sphere
+      "lump": {
+        "name": "glacier-coil2"
+      }
+    },
+
+    {
+      "trans": [28.823, 40.4, 1405.42], // translation
+      "etype": "citb-generator", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [0, 0, 0, 1], // quaternion
+      "bsphere": [-23.223, 40.8, 1435.42, 10], // bounding sphere
+      "lump": {
+        "name": "glacier-generator2"
+      }
+    },
+
+    {
+      "trans": [23.4, 28, 1413.42], // translation
+      "etype": "citb-hose", // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat": [0, 0, 0, 1], // quaternion
+      "bsphere": [-130, 25, 158.42, 10], // bounding sphere
+      "lump": {
+        "name": "glacier-hose2"
+      }
+    },
+
+    {
       "trans": [-131, 19.38, 1472.62],
       "etype": "water-anim",
       "game_task": 0,
@@ -358,7 +391,33 @@
       "bsphere": [48.77, -0.08, -112.62, 10],
       "lump": {
         "name":"WaterShape-13",
-        "scale": ["float", 0.4],
+        "scale": ["float", 1.0],
+        "look": ["int32", 13]
+      }
+    },
+
+    {
+      "trans": [23.3, 31, 1410.62],
+      "etype": "water-anim",
+      "game_task": 0,
+      "quat" : [0.0, 0.0, -0.0, 1.0],
+      "bsphere": [48.77, -0.08, -112.62, 10],
+      "lump": {
+        "name":"WaterShape-13-second",
+        "scale": ["float", 1.0],
+        "look": ["int32", 13]
+      }
+    },
+
+    {
+      "trans": [144.3, 25.7, 1673.62],
+      "etype": "water-anim",
+      "game_task": 0,
+      "quat" : [0.0, 0.0, -0.0, 1.0],
+      "bsphere": [48.77, -0.08, -112.62, 10],
+      "lump": {
+        "name":"WaterShape-13-third",
+        "scale": ["float", 2.0],
         "look": ["int32", 13]
       }
     },
@@ -373,6 +432,30 @@
       "lump": {
         "name":"eggtop",
         "movie-pos": ["movie-pos", [19.719, 23, 1555.52, 1.255]]
+      }
+    },
+
+    {
+      "trans": [ 21, 11.98, 1482.6 ],
+      "etype": "launcher",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1 ],
+      "bsphere": [ 1684.97, 47.98, -44.10, 10 ],
+      "lump": {
+        "name": "glacier-launcher-1",
+        "spring-height": [ "meters", 50.0 ],
+        "vis-dist": [ "meters", 200.0 ]
+      }
+    },
+
+    {
+      "trans": [ 21, 11.3, 1482.6 ], // translation
+      "etype": "eco-blue", // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [ 0, 0, 0, 1 ], // quaternion
+      "bsphere": [ 19.273, 12.98, -1555.1, 10 ], // bounding sphere
+      "lump": {
+        "name": "glacier-eco-blue1"
       }
     }
 

@@ -1,0 +1,1 @@
+(dotimes (i 4)(run-next-time-in-process (the process (activate (get-process *default-dead-pool* process #x4000) *default-pool* 'process (the pointer #x70004000))) (lambda () (while #t (if *target* (update-snow *target*)) (suspend)))))

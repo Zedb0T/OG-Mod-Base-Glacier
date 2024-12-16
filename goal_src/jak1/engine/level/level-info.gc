@@ -2469,14 +2469,14 @@
             default-level))
 
 ;;;;;;;;; CUSTOM LEVELS
-(define test-zone
+(define glacier
   (new 'static
        'level-load-info
        :index 26
-       :name 'test-zone
-       :visname 'test-zone-vis
+       :name 'glacier
+       :visname 'glacier-vis
        ;; name + -vis
-       :nickname 'tsz
+       :nickname 'gla
        ;; nickname
        :packages '(snow)
        :sound-banks '(snow)
@@ -2490,8 +2490,8 @@
        :continues
        '((new 'static
              'continue-point
-             :name "test-zone-start"
-             :level 'test-zone
+             :name "glacier-start"
+             :level 'glacier
              :trans
              (new 'static 'vector :x 0.0 :y (meters 10.) :z (meters 2000.) :w 1.0)
              :quat
@@ -2503,7 +2503,7 @@
              :load-commands
              '()
              :vis-nick 'none
-             :lev0 'test-zone
+             :lev0 'glacier
              :disp0 'display
              :lev1 #f
              :disp1 #f))
@@ -2522,4 +2522,4 @@
        '()
        :wait-for-load #t))
 
-(cons! *level-load-list* 'test-zone)
+(cons! *level-load-list* 'glacier)

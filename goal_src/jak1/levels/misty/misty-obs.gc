@@ -1486,7 +1486,7 @@
 
 (defmethod battlecontroller-method-27 ((this misty-battlecontroller))
   (call-parent-method this)
-  (set! (-> this misty-ambush-collision-hack) #t)
+  (set! (-> this misty-ambush-collision-hack) #f)
   0
   (none))
 

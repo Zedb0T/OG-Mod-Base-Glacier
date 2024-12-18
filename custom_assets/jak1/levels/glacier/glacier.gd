@@ -30,6 +30,7 @@
   "snow-bunny.o"
   "puffer.o"
   "sharkey.o"
+  "water-anim-sunken-ag.go"
   "sharkey-ag.go"
   "puffer-ag.go"
   "yeti-ag.go"

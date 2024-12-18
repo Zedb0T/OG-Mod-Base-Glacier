@@ -4,7 +4,7 @@
   ((root        collide-shape-moving :override)
    (cam-tracker handle)
    (sound-id    sound-id))
-  (:states (eggtop-close symbol)
+  (:states (eggtop-close-red symbol)
    eggtop-red-idle))
 
 
@@ -161,7 +161,7 @@
       (sound-stop (-> self sound-id)))
   :trans
     (behavior ()
-      (if (and (not (-> self child)) (task-complete? *game-info* (-> self entity extra perm task))) (go eggtop-close #f))
+      (if (and (not (-> self child)) (task-complete? *game-info* (-> self entity extra perm task))) (go eggtop-close-red #f))
       (spawn (-> self part) (-> self root trans))
       (sound-play "electric-loop" :id (-> self sound-id)))
   :code
@@ -171,7 +171,7 @@
       (anim-loop))
   :post ja-post)
 
-(defstate eggtop-close (eggtop-red)
+(defstate eggtop-close-red (eggtop-red)
   :trans
     (behavior ()
       (rider-trans)
@@ -252,7 +252,7 @@
   (set! (-> this part) (create-launch-control (-> *part-group-id-table* 1189) this))
   (set! (-> this sound-id) (new-sound-id))
   (cond
-    ((task-complete? *game-info* (-> this entity extra perm task)) (go eggtop-close #t))
+    ((task-complete? *game-info* (-> this entity extra perm task)) (go eggtop-close-red #t))
     (else
      (birth-pickup-at-point (vector+! (new 'stack-no-clear 'vector) (-> this root trans) (new 'static 'vector :y 6144.0 :w 1.0))
                             (pickup-type fuel-cell)

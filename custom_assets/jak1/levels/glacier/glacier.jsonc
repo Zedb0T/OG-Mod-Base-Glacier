@@ -62,7 +62,7 @@
   // Note: You will still have to add them to your level's .gd file.
   // "art_groups": ["plat-ag"],
   "art_groups": ["babak-ag", "plat-ag", "plat-eco-ag", "citb-coil-ag", "citb-generator-ag", "citb-hose-ag", "citb-disc-ag", "citb-donut-ag", "water-anim-sunken-dark-eco-ag", "eggtop-ag", "bonelurker-ag", "mistycam-ag", "jng-iris-door-ag", "dark-crystal-ag"
-, "ecovalve-ag", "yeti-ag", "snow-bunny-ag", "puffer-ag", "sharkey-ag"],
+, "ecovalve-ag", "yeti-ag", "snow-bunny-ag", "puffer-ag", "sharkey-ag", "water-anim-sunken-ag"],
 
   // If you have any custom models in the "custom_assets/jak1/models/custom_levels" folder that you want to use in your level, add them to this list.
   // Note: Like with art groups, these should also be added to your level's .gd file.
@@ -437,16 +437,16 @@
     {
       "trans": [-121, 26.8, 1454.42], // translation
       "etype": "citb-generator", // actor type
-      "game_task": "(game-task citadel-sage-blue)", // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-generator1)", // associated game task (for powercells, etc)
       "quat": [0, 0, 0, 1], // quaternion
       "bsphere": [-130, 27, 158.42, 10], // bounding sphere
       "lump": {
         "name": "glacier-generator1",
         "alt-actor": [ "string", 
       "glacier-hose1",
-      "glacier-coil1"]
-      },
-      "movie-pos": ["movie-pos", [-121, 26.8, 1454.42]]
+      "glacier-coil1"],
+      "movie-pos": ["movie-pos", [-121, 26.8, 1454.42, 1.255]]
+      }
     },
 
     {
@@ -474,14 +474,15 @@
     {
       "trans": [28.823, 40.4, 1405.42], // translation
       "etype": "citb-generator", // actor type
-      "game_task": "(game-task citadel-sage-blue)", // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-generator2)", // associated game task (for powercells, etc)
       "quat": [0, 0, 0, 1], // quaternion
       "bsphere": [-23.223, 40.8, 1435.42, 10], // bounding sphere
       "lump": {
         "name": "glacier-generator2",
         "alt-actor": [ "string", 
       "glacier-hose2",
-      "glacier-coil2"]
+      "glacier-coil2"],
+      "movie-pos": ["movie-pos", [28.823, 40.4, 1405.42, 1.0]]
       }
     },
 
@@ -510,14 +511,15 @@
     {
       "trans": [61.559, 38.58, 1707.9], // translation
       "etype": "citb-generator", // actor type
-      "game_task": "(game-task citadel-sage-blue)", // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-generator3)", // associated game task (for powercells, etc)
       "quat": [0, 0, 0, 1], // quaternion
       "bsphere": [-23.223, 40.8, 1435.42, 10], // bounding sphere
       "lump": {
         "name": "glacier-generator3",
         "alt-actor": [ "string", 
       "glacier-hose3",
-      "glacier-coil3"]
+      "glacier-coil3"],
+      "movie-pos": ["movie-pos", [61.559, 38.58, 1707.9, 1.0]]
       }
     },
 
@@ -692,7 +694,7 @@
       "aid": 50000,
       "trans": [ 175.64, 24.3, 1500.6 ], // translation
       "etype": "misty-battlecontroller", // actor type
-      "game_task": "(game-task citadel-sage-blue)", // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-ambush)", // associated game task (for powercells, etc)
       "quat": [ 0, 0, 0, 1 ], // quaternion
       "bsphere": [ 175.64, 24.3, 1500.6, 10 ], // bounding sphere
       "lump": {
@@ -1613,85 +1615,92 @@
       {
         "trans": [32.89, 1.97, 1843.78],
         "etype": "crate",
-        "game_task": "(game-task none)",
+        "game_task": "(game-task glacier-buzzer)",
         "quat": [0,0,0,1],
         "bsphere": [32.89, 1.97, 1843.78, 10],
         "lump": {
           "name": "glacier-fly1",
           "crate-type": "'iron",
-          "eco-info": ["int32", 8, 1]
+          "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 0 ],
+          "movie-pos": ["movie-pos", [32.89, 1.97, 1843.78, 1.255]]
         }
     },
     {
         "trans": [-1.18, 11.34, 1691.06],
         "etype": "crate",
-        "game_task": "(game-task none)",
+        "game_task": "(game-task glacier-buzzer)",
         "quat": [0,0,0,1],
         "bsphere": [-1.18, 11.34, 1691.06, 10],
         "lump": {
           "name": "glacier-fly2",
           "crate-type": "'iron",
-          "eco-info": ["int32", 8, 1]
+          "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 1 ],
+          "movie-pos": ["movie-pos", [-1.18, 11.34, 1691.06, 1.255]]
         }
     },
     {
         "trans": [-116.54, 39.08, 1596.62],
         "etype": "crate",
-        "game_task": "(game-task none)",
+        "game_task": "(game-task glacier-buzzer)",
         "quat": [0,0,0,1],
         "bsphere": [-116.54, 39.08, 1596.62, 10],
         "lump": {
           "name": "glacier-fly3",
           "crate-type": "'iron",
-          "eco-info": ["int32", 8, 1]
+          "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 2 ],
+          "movie-pos": ["movie-pos", [-116.54, 39.08, 1596.62, 1.255]]
         }
     },
     {
         "trans": [-89.53, 24.98, 1492.90],
         "etype": "crate",
-        "game_task": "(game-task none)",
+        "game_task": "(game-task glacier-buzzer)",
         "quat": [0,0,0,1],
         "bsphere": [-89.53, 24.98, 1492.90, 10],
         "lump": {
           "name": "glacier-fly4",
           "crate-type": "'iron",
-          "eco-info": ["int32", 8, 1]
+          "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 3 ],
+          "movie-pos": ["movie-pos", [-89.53, 24.98, 1492.90, 1.255]]
         }
     },
     {
         "trans": [41.97, 16.31, 1575.26],
         "etype": "crate",
-        "game_task": "(game-task none)",
+        "game_task": "(game-task glacier-buzzer)",
         "quat": [0,0,0,1],
         "bsphere": [41.97, 16.31, 1575.26, 10],
         "lump": {
           "name": "glacier-fly5",
           "crate-type": "'iron",
-          "eco-info": ["int32", 8, 1]
+          "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 4 ],
+          "movie-pos": ["movie-pos", [41.97, 16.31, 1575.26, 1.255]]
         }
     },
     {
         "trans": [3.68, 31.79, 1422.14],
         "etype": "crate",
-        "game_task": "(game-task none)",
+        "game_task": "(game-task glacier-buzzer)",
         "quat": [0,0,0,1],
         "bsphere": [3.68, 31.79, 1422.14, 10],
         "lump": {
           "name": "glacier-fly6",
           "crate-type": "'iron",
-          "eco-info": ["int32", 8, 1]
+          "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 5 ],
+          "movie-pos": ["movie-pos", [3.68, 31.79, 1422.14, 1.255]]
         }
     },
     {
         "trans": [166.66, 27.09, 1667.99],
         "etype": "crate",
-        "game_task": "(game-task none)",
+        "game_task": "(game-task glacier-buzzer)",
         "quat": [0,0,0,1],
         "bsphere": [166.66, 27.09, 1667.99, 10],
         "lump": {
           "name": "glacier-fly7",
           "crate-type": "'iron",
-          "eco-info": ["int32", 8, 1]
+          "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 6 ],
+          "movie-pos": ["movie-pos", [166.66, 27.09, 1667.99, 1.255]]
         }
     }, 
       /////////////////////ECOBALLS////////////////////////////
@@ -1863,56 +1872,61 @@
     {
       "trans": [35.16,17.00,1703.00],
       "etype": "dark-crystal",
-      "game_task": "(game-task citadel-sage-blue)",
+      "game_task": "(game-task glacier-eco-crystal)",
       "quat": [0,0,0,1],
       "bsphere": [35.16,17.00,1703.00,10],
       "lump": {
         "name": "glacier-crystal-01",
-        "extra-id": ["int32",1]
+        "extra-id": ["int32",1],
+        "movie-pos": ["movie-pos", [35.16,17.00,1703.00, 1.0]]
       }
   },
   {
       "trans": [-112.34,29.19,1421.65],
       "etype": "dark-crystal",
-      "game_task": "(game-task citadel-sage-blue)",
+      "game_task": "(game-task glacier-eco-crystal)",
       "quat": [0,0,0,1],
       "bsphere": [-112.34,29.19,1421.65,10],
       "lump": {
         "name": "glacier-crystal-02",
-        "extra-id": ["int32",2]
+        "extra-id": ["int32",2],
+        "movie-pos": ["movie-pos", [-112.34,29.19,1421.65, 1.0]]
       }
   },
   {
       "trans": [41.84,17.74,1533.08],
       "etype": "dark-crystal",
-      "game_task": "(game-task citadel-sage-blue)",
+      "game_task": "(game-task glacier-eco-crystal)",
       "quat": [0,0,0,1],
       "bsphere": [41.84,17.74,1533.08,10],
       "lump": {
         "name": "glacier-crystal-03",
-        "extra-id": ["int32",3]
+        "extra-id": ["int32",3],
+        "movie-pos": ["movie-pos", [41.84,17.74,1533.08, 1.0]]
       }
   },
   {
       "trans": [170.81,32.70,1700.05],
       "etype": "dark-crystal",
-      "game_task": "(game-task citadel-sage-blue)",
+      "game_task": "(game-task glacier-eco-crystal)",
       "quat": [0,0,0,1],
       "bsphere": [170.81,32.70,1700.05,10],
       "lump": {
         "name": "glacier-crystal-04",
-        "extra-id": ["int32",4]
+        "extra-id": ["int32",4],
+        "movie-pos": ["movie-pos", [170.81,32.70,1700.05, 1.0]]
       }
   },
   {
       "trans": [-1.75, 15.84, 1582.35],
       "etype": "dark-crystal",
-      "game_task": "(game-task citadel-sage-blue)",
+      "game_task": "(game-task glacier-eco-crystal)",
       "quat": [0,0,0,1],
       "bsphere": [35.89,16.23,1578.86,10],
       "lump": {
         "name": "glacier-crystal-05",
-        "extra-id": ["int32",5]
+        "extra-id": ["int32",5],
+        "movie-pos": ["movie-pos", [-1.75, 15.84, 1582.35, 1.0]]
       }
   },
 

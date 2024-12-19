@@ -62,7 +62,7 @@
   // Note: You will still have to add them to your level's .gd file.
   // "art_groups": ["plat-ag"],
   "art_groups": ["babak-ag", "plat-ag", "plat-eco-ag", "citb-coil-ag", "citb-generator-ag", "citb-hose-ag", "citb-disc-ag", "citb-donut-ag", "water-anim-sunken-dark-eco-ag", "eggtop-ag", "bonelurker-ag", "mistycam-ag", "jng-iris-door-ag", "dark-crystal-ag"
-, "ecovalve-ag", "yeti-ag", "snow-bunny-ag", "puffer-ag", "sharkey-ag", "water-anim-sunken-ag"],
+, "ecovalve-ag", "yeti-ag", "snow-bunny-ag", "puffer-ag", "sharkey-ag", "water-anim-sunken-ag", "warpgate-ag", "warp-gate-switch-ag"],
 
   // If you have any custom models in the "custom_assets/jak1/models/custom_levels" folder that you want to use in your level, add them to this list.
   // Note: Like with art groups, these should also be added to your level's .gd file.
@@ -445,7 +445,7 @@
         "alt-actor": [ "string", 
       "glacier-hose1",
       "glacier-coil1"],
-      "movie-pos": ["movie-pos", [-121, 26.8, 1454.42, 1.255]]
+      "movie-pos": ["movie-pos", [-104.79, 21.01, 1450.97, 11.3689]]
       }
     },
 
@@ -482,7 +482,7 @@
         "alt-actor": [ "string", 
       "glacier-hose2",
       "glacier-coil2"],
-      "movie-pos": ["movie-pos", [28.823, 40.4, 1405.42, 1.0]]
+      "movie-pos": ["movie-pos", [24.77, 32.35, 1425.24, 4.5330]]
       }
     },
 
@@ -519,7 +519,7 @@
         "alt-actor": [ "string", 
       "glacier-hose3",
       "glacier-coil3"],
-      "movie-pos": ["movie-pos", [61.559, 38.58, 1707.9, 1.0]]
+      "movie-pos": ["movie-pos", [70.31, 37.31, 1696.41, 78.8370]]
       }
     },
 
@@ -751,7 +751,7 @@
         "babak",
         "bonelurker"
         ],
-        "num-lurkers": ["int32", 15, 165],
+        "num-lurkers": ["int32", 15, 125],
         "percent": ["float", 0.75, 0.25],
         "pickup-percent": ["float",
         0.1,
@@ -1622,11 +1622,11 @@
           "name": "glacier-fly1",
           "crate-type": "'iron",
           "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 0 ],
-          "movie-pos": ["movie-pos", [32.89, 1.97, 1843.78, 1.255]]
+          "movie-pos": ["movie-pos", [32.89, 1.97, 1843.78, -14.0362]]
         }
     },
     {
-        "trans": [-1.18, 11.34, 1691.06],
+        "trans": [21.69,  12.33, 1682.40],
         "etype": "crate",
         "game_task": "(game-task glacier-buzzer)",
         "quat": [0,0,0,1],
@@ -1635,7 +1635,7 @@
           "name": "glacier-fly2",
           "crate-type": "'iron",
           "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 1 ],
-          "movie-pos": ["movie-pos", [-1.18, 11.34, 1691.06, 1.255]]
+          "movie-pos": ["movie-pos", [1.26, 11.34, 1702.73, 80.8812]]
         }
     },
     {
@@ -1648,7 +1648,7 @@
           "name": "glacier-fly3",
           "crate-type": "'iron",
           "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 2 ],
-          "movie-pos": ["movie-pos", [-116.54, 39.08, 1596.62, 1.255]]
+          "movie-pos": ["movie-pos", [-108.26, 26.5, 1594.16, -1.6240]]
         }
     },
     {
@@ -1661,7 +1661,7 @@
           "name": "glacier-fly4",
           "crate-type": "'iron",
           "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 3 ],
-          "movie-pos": ["movie-pos", [-89.53, 24.98, 1492.90, 1.255]]
+          "movie-pos": ["movie-pos", [-98.65,  23.38, 1499.79, -0.5342]]
         }
     },
     {
@@ -1674,7 +1674,7 @@
           "name": "glacier-fly5",
           "crate-type": "'iron",
           "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 4 ],
-          "movie-pos": ["movie-pos", [41.97, 16.31, 1575.26, 1.255]]
+          "movie-pos": ["movie-pos", [31.63, 15.98, 1581.04, -75.0698]]
         }
     },
     {
@@ -1687,7 +1687,7 @@
           "name": "glacier-fly6",
           "crate-type": "'iron",
           "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 5 ],
-          "movie-pos": ["movie-pos", [3.68, 31.79, 1422.14, 1.255]]
+          "movie-pos": ["movie-pos", [14.08, 32.20, 1426.40, 26.0272]]
         }
     },
     {
@@ -1700,7 +1700,7 @@
           "name": "glacier-fly7",
           "crate-type": "'iron",
           "eco-info": [ "buzzer-info", "(game-task glacier-buzzer)", 6 ],
-          "movie-pos": ["movie-pos", [166.66, 27.09, 1667.99, 1.255]]
+          "movie-pos": ["movie-pos", [144.33, 26.84, 1660.44, 17.9126]]
         }
     }, 
       /////////////////////ECOBALLS////////////////////////////
@@ -1868,6 +1868,28 @@
         "sync": ["float", 5.0, 0.0]
       }
     },
+    {
+      "trans": [14.79,3.50,1632.48],
+      "etype": "plat",
+      "game_task": "(game-task none)",
+      "quat": [0,0,0,1],
+      "bsphere": [158.87,27.68,1692.48,10],
+      "lump": {
+        "name": "glacier-plat-9-lifesaver",
+        "sync": ["float", 5.0, 0.0]
+      }
+    },
+    {
+      "trans": [-109.31,15,1555.48],
+      "etype": "plat",
+      "game_task": "(game-task none)",
+      "quat": [0,0,0,1],
+      "bsphere": [158.87,27.68,1692.48,10],
+      "lump": {
+        "name": "glacier-plat-10-lifesaver",
+        "sync": ["float", 5.0, 0.0]
+      }
+    },
     ////////////////////////ECOCRYSTALS/////////////////////////
     {
       "trans": [35.16,17.00,1703.00],
@@ -1878,7 +1900,7 @@
       "lump": {
         "name": "glacier-crystal-01",
         "extra-id": ["int32",1],
-        "movie-pos": ["movie-pos", [35.16,17.00,1703.00, 1.0]]
+        "movie-pos": ["movie-pos", [35.16,17.00,1703.00, -87.4970]]
       }
   },
   {
@@ -1890,7 +1912,7 @@
       "lump": {
         "name": "glacier-crystal-02",
         "extra-id": ["int32",2],
-        "movie-pos": ["movie-pos", [-112.34,29.19,1421.65, 1.0]]
+        "movie-pos": ["movie-pos", [-100.24, 26.69, 1422.51, -10.5558]]
       }
   },
   {
@@ -1902,7 +1924,7 @@
       "lump": {
         "name": "glacier-crystal-03",
         "extra-id": ["int32",3],
-        "movie-pos": ["movie-pos", [41.84,17.74,1533.08, 1.0]]
+        "movie-pos": ["movie-pos", [41.84,17.74,1533.08, -58.2286]]
       }
   },
   {
@@ -1914,7 +1936,7 @@
       "lump": {
         "name": "glacier-crystal-04",
         "extra-id": ["int32",4],
-        "movie-pos": ["movie-pos", [170.81,32.70,1700.05, 1.0]]
+        "movie-pos": ["movie-pos", [170.81,32.70,1700.05, -44.1522]]
       }
   },
   {
@@ -1926,7 +1948,7 @@
       "lump": {
         "name": "glacier-crystal-05",
         "extra-id": ["int32",5],
-        "movie-pos": ["movie-pos", [-1.75, 15.84, 1582.35, 1.0]]
+        "movie-pos": ["movie-pos", [-1.75, 15.84, 1582.35, 48.9883]]
       }
   },
 
@@ -2054,7 +2076,7 @@
 },
 ////////////WATER/////////////////
 {
-  "trans": [ 15.456, 0.0, 1717.1 ], // translation
+  "trans": [ 1500.456, 0.0, 1717.1 ], // translation
   "etype": "water-anim", // actor type
   "game_task": 0, // associated game task (for powercells, etc)
   "quat": [ 0, 0, 0, 1 ], // quaternion
@@ -3203,6 +3225,44 @@
     "water-height": [ "float", 0.000, 0.000, 0.000 ],
     "scale": ["float", 2.0]
   }
-}
+},
+
+///////warp gate//////
+{
+  "trans": [ -8.97, 5.96, 2016 ],
+  "etype": "warpgate",
+  "game_task": 0,
+  "quat": [ 0, 0, 0, 1 ],
+  "bsphere": [ -8.97, 5.96, 2016, 10 ],
+  "lump": {
+    "name": "glacier-warpgate"
+  }
+},
+
+{
+  "trans": [ -9.237, 3.9, 2010 ],
+  "etype": "warp-gate-switch",
+  "game_task": 122,
+  "quat": [ 0, 0, 0, 1 ],
+  "bsphere": [ 534.43, 7.09, 474.54, 10 ],
+  "lump": {
+    "name": "glacier-warp-gate-switch",
+    "alt-actor": "glacier-training-part-1"
+  }
+},
+
+{
+  "trans": [ -8.97, 5.96, 2016 ],
+  "etype": "training-part",
+  "game_task": 0,
+  "quat": [ 0, 0, 0, 1 ],
+  "bsphere": [ -8.97, 5.96, 2016, 10 ],
+  "lump": {
+    "name": "glacier-training-part-1",
+    "effect-name": "'warpgate-loop",
+    "art-name": "group-training-warpgate",
+    "effect-param": [ "float", 3.0000, 80.0000, 12.0000, 40.0000 ],
+    "cycle-speed": [ "float", -1.0000, 0.0000 ]
+  }}
   ]
 }

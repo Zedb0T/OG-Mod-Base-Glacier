@@ -882,7 +882,8 @@
   (glacier-generator3 119)
   (glacier-ambush 120)
   (glacier-eco-crystal 121)
-  (max 122)
+  (glacier-button 123)
+  (max 123)
   )
 
 (defenum text-id

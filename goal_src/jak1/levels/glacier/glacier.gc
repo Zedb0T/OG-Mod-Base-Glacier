@@ -1,3 +1,4 @@
+(deftype glacier-part (part-spawner) ())
 
 ;;;;;;;;;;EGGTOP;;;;;;;;;;;;;;;;;;
 (deftype eggtop-red (process-drawable)
@@ -845,3 +846,5 @@
     (go yeti-glacier-resuming-start)
     (go yeti-glacier-idle))
   (none))
+
+  

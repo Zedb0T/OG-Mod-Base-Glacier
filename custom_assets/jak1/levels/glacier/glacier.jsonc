@@ -3252,11 +3252,11 @@
 },
 
 {
-  "trans": [ -8.97, 5.96, 2016 ],
+  "trans": [ -8.97, 7.2, 2016 ],
   "etype": "training-part",
   "game_task": 0,
-  "quat": [ 0, 0, 0, 1 ],
-  "bsphere": [ -8.97, 5.96, 2016, 10 ],
+  "quat": [ 0.0000, -0.8837, 0.0000, -0.4678 ],
+  "bsphere": [ -8.97, 7.96, 2016, 10 ],
   "lump": {
     "name": "glacier-training-part-1",
     "effect-name": "'warpgate-loop",

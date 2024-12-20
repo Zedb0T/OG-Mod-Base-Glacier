@@ -24,7 +24,7 @@
   water-anim-sunken-dark-eco-platform-room-lod0-jg
   -1
   ((water-anim-sunken-dark-eco-platform-room-lod0-mg (meters 999999)))
-  :bounds (static-spherem 0 0 0 22))
+  :bounds (static-spherem 0 0 0 222))
 
 (defskelgroup *water-anim-sunken-dark-eco-helix-room-sg*
   water-anim-sunken-dark-eco

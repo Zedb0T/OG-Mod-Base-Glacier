@@ -62,7 +62,7 @@
   // Note: You will still have to add them to your level's .gd file.
   // "art_groups": ["plat-ag"],
   "art_groups": ["babak-ag", "plat-ag", "plat-eco-ag", "citb-coil-ag", "citb-generator-ag", "citb-hose-ag", "citb-disc-ag", "citb-donut-ag", "water-anim-sunken-dark-eco-ag", "eggtop-ag", "bonelurker-ag", "mistycam-ag", "jng-iris-door-ag", "dark-crystal-ag"
-, "ecovalve-ag", "yeti-ag", "snow-bunny-ag", "puffer-ag", "sharkey-ag", "water-anim-sunken-ag", "warpgate-ag", "warp-gate-switch-ag"],
+, "ecovalve-ag", "yeti-ag", "snow-bunny-ag", "puffer-ag", "sharkey-ag", "water-anim-sunken-ag", "warpgate-ag", "warp-gate-switch-ag", "swampcam-ag"],
 
   // If you have any custom models in the "custom_assets/jak1/models/custom_levels" folder that you want to use in your level, add them to this list.
   // Note: Like with art groups, these should also be added to your level's .gd file.
@@ -421,12 +421,10 @@
             "name": "glacier-snowdrops-part-9"
           }
         },
-        
-
     {
       "trans": [-126, 27.5, 1459.42], // translation
       "etype": "citb-coil", // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-generator1)", // associated game task (for powercells, etc)
       "quat": [0, 0, 0, 1], // quaternion
       "bsphere": [-130, 27, 158.42, 10], // bounding sphere
       "lump": {
@@ -452,7 +450,7 @@
     {
       "trans": [-133, 18, 1481.42], // translation
       "etype": "citb-hose", // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-generator1)", // associated game task (for powercells, etc)
       "quat": [0.0000, -0.7048, 0.0000, -0.7093], // quaternion
       "bsphere": [-130, 25, 158.42, 10], // bounding sphere
       "lump": {
@@ -463,7 +461,7 @@
     {
       "trans": [23, 41.35, 1400.42], // translation
       "etype": "citb-coil", // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-generator2)", // associated game task (for powercells, etc)
       "quat": [0, 0, 0, 1], // quaternion
       "bsphere": [-23, 42.75, 1429.42, 10], // bounding sphere
       "lump": {
@@ -489,7 +487,7 @@
     {
       "trans": [23.4, 28, 1413.42], // translation
       "etype": "citb-hose", // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-generator2)", // associated game task (for powercells, etc)
       "quat": [0, 0, 0, 1], // quaternion
       "bsphere": [-130, 25, 158.42, 10], // bounding sphere
       "lump": {
@@ -500,7 +498,7 @@
     {
       "trans": [60.508, 38.424, 1698.0], // translation
       "etype": "citb-coil", // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-generator3)", // associated game task (for powercells, etc)
       "quat": [0, 0, 0, 1], // quaternion
       "bsphere": [-23, 42.75, 1429.42, 10], // bounding sphere
       "lump": {
@@ -526,7 +524,7 @@
     {
       "trans": [116.63, 25.3, 1666.7], // translation
       "etype": "citb-hose", // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
+      "game_task": "(game-task glacier-generator3)", // associated game task (for powercells, etc)
       "quat": [0.0000, -0.4841, 0.0000, -0.8750], // quaternion
       "bsphere": [-130, 25, 158.42, 10], // bounding sphere
       "lump": {
@@ -548,7 +546,7 @@
     },
 
     {
-      "trans": [-1311, 19.3860, 1472.62],
+      "trans": [-1311, 19.3860, -1472.62],
       "etype": "dark-eco-pool",
       "game_task": 0,
       "quat" : [0.0, 0.0, -0.0, 1.0],
@@ -589,7 +587,7 @@
     },
 
     {
-      "trans": [1123.3, 31, 1410.62],
+      "trans": [-1123.3, 31, -1410.62],
       "etype": "dark-eco-pool",
       "game_task": 0,
       "quat" : [0.0, 0.0, -0.0, 1.0],
@@ -628,7 +626,7 @@
       }
     },
     {
-      "trans": [1144.3, 25.7, 1673.62],
+      "trans": [-1144.3, 25.7, -1673.62],
       "etype": "dark-eco-pool",
       "game_task": 0,
       "quat" : [0.0, 0.0, -0.0, 1.0],
@@ -646,7 +644,7 @@
     [0.000, 1.000, -0.000, 25.781]
   ],
   "water-height": ["float",
-        25, // Dark Eco Water Height
+        25.7, // Dark Eco Water Height
         2048, // Wade Height 
         8192, // Swim Height
         1572872.0 // Flags
@@ -693,7 +691,7 @@
     {
       "aid": 50000,
       "trans": [ 175.64, 24.3, 1500.6 ], // translation
-      "etype": "misty-battlecontroller", // actor type
+      "etype": "glacier-battlecontroller", // actor type
       "game_task": "(game-task glacier-ambush)", // associated game task (for powercells, etc)
       "quat": [ 0, 0, 0, 1 ], // quaternion
       "bsphere": [ 175.64, 24.3, 1500.6, 10 ], // bounding sphere
@@ -751,7 +749,7 @@
         "babak",
         "bonelurker"
         ],
-        "num-lurkers": ["int32", 15, 125],
+        "num-lurkers": ["int32", 15, 100],
         "percent": ["float", 0.75, 0.25],
         "pickup-percent": ["float",
         0.1,
@@ -764,6 +762,8 @@
         "play-mode": "'sidekick",
         "sound-name": "sksp0069",
         "text-id": ["int32", 675],
+        "alt-actor": ["string", "glacier-door"],
+        "trigger-actor": ["string", "glacier-door"],
         "movie-pos": ["movie-pos", [176.06, 24.00, 1499.9, 1.255]]
     }},
 
@@ -1711,7 +1711,7 @@
         "quat": [ 0, 0, 0, 1 ], // quaternion
         "bsphere": [ 1684.97, 49.98, -44.10, 10 ], // bounding sphere
         "lump": {
-          "name": "glacier-eco-blue1"
+          "name": "glacier-eco-blue2"
         }
       },
       /////////////////////VENTS///////////////////////////////
@@ -1873,7 +1873,7 @@
       "etype": "plat",
       "game_task": "(game-task none)",
       "quat": [0,0,0,1],
-      "bsphere": [158.87,27.68,1692.48,10],
+      "bsphere": [14.79,3.50,1632.48,10],
       "lump": {
         "name": "glacier-plat-9-lifesaver",
         "sync": ["float", 5.0, 0.0]
@@ -3111,7 +3111,9 @@
       [121.31, 34.02, 1663.60],
       [140.68, 34.68, 1672.45],
       [158.49, 33.63, 1681.81]
-    ]
+    ],
+    "alt-actor": ["string", "glacier-puffer-7"],
+    "sync": ["float", 8.0, 0.0]
   }
 },
 {
@@ -3128,7 +3130,9 @@
       [146.39, 34.13, 1687.33],
       [125.92, 34.59, 1679.92]
     ],
-    "nav-mesh-actor": [ "uint32", 51600 ]
+    "nav-mesh-actor": [ "uint32", 51600 ],
+    "alt-actor": ["string", "glacier-puffer-6"],
+    "sync": ["float", 8.0, 0.5]
   }
 },
 {
@@ -3144,7 +3148,9 @@
       [-6.99, 19.19, 1628.88],
       [5.23, 18.80, 1628.61],
       [24.07, 18.19, 1628.19]
-    ]
+    ],
+    "alt-actor": ["string", "glacier-puffer-2"],
+    "sync": ["float", 8.0, 0.5]
   }
 },
 {
@@ -3161,7 +3167,9 @@
       [20.64, 18.07, 1637.78],
       [7.40, 17.64, 1638.69]
     ],
-    "nav-mesh-actor": [ "uint32", 51700 ]
+    "nav-mesh-actor": [ "uint32", 51700 ],
+    "alt-actor": ["string", "glacier-puffer-1"],
+    "sync": ["float", 8.0, 0.0]
   }
 },
 {
@@ -3193,7 +3201,9 @@
       [94.46, 32.80, 1420.49],
       [81.81, 30.61, 1439.04],
       [84.57, 29.91, 1459.64]
-    ]
+    ],
+    "alt-actor": ["string", "glacier-puffer-5"],
+    "sync": ["float", 8.0, 0.5]
   }
 },
 {
@@ -3210,7 +3220,9 @@
       [62.27, 31.73, 1485.64],
       [58.48, 31.68, 1508.55]
     ],
-    "nav-mesh-actor": [ "uint32", 51900 ]
+    "nav-mesh-actor": [ "uint32", 51900 ],
+    "alt-actor": ["string", "glacier-puffer-4"],
+    "sync": ["float", 8.0, 0.0]
   }
 },
 {

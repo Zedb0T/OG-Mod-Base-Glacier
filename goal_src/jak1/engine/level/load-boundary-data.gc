@@ -1503,7 +1503,7 @@
                   ;;          point 0 x        point 0 z      point 1 x        point 1 z
                   :points (  (meters 7.40) (meters 1723.28)  (meters 22.41) (meters 1723) )
                   :fwd (checkpt "glacier-checkpoint1" #f)
-                  :bwd (checkpt "glacier-start" #f)
+                  :bwd (checkpt "glacier-warp" #f)
   )
                   (static-load-boundary :flags (player )
                   ;;     y top                y bottom

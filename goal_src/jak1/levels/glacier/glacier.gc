@@ -294,8 +294,12 @@
 
 (defmethod eco-door-method-25 ((this glacier-iris-door))
   (initialize-skeleton this *jng-iris-door-sg* '())
-  (set! (-> this open-distance) 32768.0)
-  (set! (-> this close-distance) 49152.0)
+  (set! (-> this open-distance) 22768.0)
+  (set! (-> this close-distance) 23920.0)
+  (set! (-> this auto-close) #t)
+  (set! (-> this one-way) #t)
+  (vector-z-quaternion! (-> this out-dir) (-> this root quat))
+  (set! (-> this out-dir w) (- 8192.0 (vector-dot (-> this out-dir) (-> this root trans))))
   (update-transforms! (-> this root))
   0
   (none))
@@ -847,4 +851,20 @@
     (go yeti-glacier-idle))
   (none))
 
-  
+(defskelgroup *swampcam-sg*
+  swampcam
+  swampcam-lod0-jg
+  swampcam-anim-ja
+  ((swampcam-lod0-mg (meters 999999)))
+  :bounds (static-spherem 0 0 0 15))
+
+(deftype glacier-battlecontroller (battlecontroller) ())
+
+(defstate battlecontroller-play-intro-camera (glacier-battlecontroller)
+  :virtual #t
+  :code
+    (behavior ()
+    (let ((gp-1 (ppointer->handle (process-spawn pov-camera (static-vectorm 175 24 1500) *swampcam-sg* "swamp-ambush" 0 #f '() :to self))))
+        (while (handle->process (the-as handle gp-1))
+          (suspend)))
+      (go-virtual battlecontroller-active)))

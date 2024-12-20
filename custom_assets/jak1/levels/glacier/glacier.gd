@@ -3,7 +3,7 @@
 
 ;; the actual file name still needs to be 8.3
 ("GLA.DGO"
- ("glacier.o"
+ (
   "villagep-obs.o"
   "village1-part.o"
   "village1-part2.o"
@@ -29,8 +29,9 @@
   "yeti.o"
   "snow-bunny.o"
   "puffer.o"
-  "sharkey.o"
   "training-part.o"
+  "glacier.o"
+  "swampcam-ag.go"
   "warpgate-ag.go"
   "warp-gate-switch-ag.go"
   "water-anim-sunken-ag.go"

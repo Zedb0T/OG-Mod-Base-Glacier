@@ -751,13 +751,13 @@
         ],
         "num-lurkers": ["int32", 15, 100],
         "percent": ["float", 0.75, 0.25],
+        "eco-info": ["int32", 9, 2],
         "pickup-percent": ["float",
         0.1,
         0.2
         ],
-        "pickup-type": 
-        ["int32", 4, 4],
-        "eco-info": ["int32", 9, 1],
+        "pickup-type": ["int32", 4, 1],
+        "max-pickup-count": ["int32", 20, 20],
         "final-pickup": ["int32", 6, 1],
         "play-mode": "'sidekick",
         "sound-name": "sksp0069",

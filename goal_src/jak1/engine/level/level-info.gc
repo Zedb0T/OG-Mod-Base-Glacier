@@ -2493,16 +2493,16 @@
              :name "glacier-start"
              :level 'glacier
              :trans
-             (new 'static 'vector :x 0.0 :y (meters 10.) :z (meters 2000.) :w 1.0)
+             (new 'static 'vector :x 0.0 :y (meters 4.09) :z (meters 2000.) :w 1.0)
              :quat
              (new 'static 'quaternion :w 1.0)
              :camera-trans
              (new 'static 'vector :x 0.0 :y 4096.0 :z 0.0 :w 1.0)
              :camera-rot
-             (new 'static 'array float 9 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0)
+             (new 'static 'array float 9 -0.9995 -0.0000 -0.0297 0.0043 0.9891 -0.1470 0.0294 -0.1471 -0.9886)
              :load-commands
              '()
-             :vis-nick 'none
+             :vis-nick 'gla
              :lev0 'glacier
              :disp0 'display
              :lev1 #f
@@ -2591,7 +2591,7 @@
         :camera-trans (new 'static 'vector :x -559109.3 :y 200461.92 :z 826073.06 :w 1.0)
         :camera-rot (new 'static 'array float 9 -0.9732 -0.0000 0.2296 -0.0492 0.9767 -0.2086 -0.2243 -0.2143 -0.9506)
                                               :load-commands '()
-                                              :vis-nick 'glacier
+                                              :vis-nick 'gla
                                               :lev0 'glacier
                                               :disp0 'display
                                               :lev1 #f

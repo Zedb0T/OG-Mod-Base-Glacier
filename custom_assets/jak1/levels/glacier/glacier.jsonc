@@ -660,7 +660,8 @@
       "bsphere": [48.77, -0.08, -112.62, 10],
       "lump": {
         "name":"eggtop",
-        "movie-pos": ["movie-pos", [19.719, 23, 1555.52, 1.255]]
+        "movie-pos": ["movie-pos", [19.719, 23, 1555.52, 1.255]],
+        "movie-mask": ["int32", 495]
       }
     },
 
@@ -3234,7 +3235,7 @@
   "lump": {
     "name": "glacier-sharkey",
     "water-height": [ "float", 0.000, 0.000, 0.000 ],
-    "scale": ["float", 2.0]
+    "scale": ["float", 1.5]
   }
 },
 
